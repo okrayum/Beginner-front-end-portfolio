@@ -1,0 +1,242 @@
+*, html, body, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after { box-sizing: inherit;}
+
+body {
+    height: 100vh;
+    background-color: gray;
+    line-height: 1.4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: silver;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nav styling */
+
+.navbar {
+    width: 100%;
+    height: 12vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5em;
+    padding-top: 1em;
+}
+
+header {
+    width: 100%;
+    height: auto;
+}
+
+header h3 {
+    padding-top: 2rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+li {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    padding-bottom: 2em;
+}
+
+
+a {
+    text-decoration: none;
+    color: silver;
+}
+
+a:hover {
+    color: white;
+}
+
+
+/* Main Styling */
+
+img {
+    width: 100%;
+    height: 10em;
+}
+
+figcaption {
+    color: silver;
+}
+    
+section {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section figure {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+.hero {
+    background-image: url(../images/pexels-hristo-fidanov-2.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15em;
+    color: silver;
+    font-style: oblique;
+}
+
+
+main {
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "hero"
+    "one"
+    "two"
+    "three"
+    "four";
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+figcaption:hover {
+    color: green;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.sec-1 {
+    background-color: black;
+    grid-area: one;
+}
+
+.sec-2 {
+    background-color: black;
+    grid-area: two;
+}
+
+.sec-3 {
+    background-color: black;
+    grid-area: three;
+}
+
+.sec-4 {
+    background-color: black;
+    grid-area: four;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-top: .5em;
+}
+
+@media (min-width: 400px) and (max-width: 690px) {
+
+    
+    .navbar {
+        flex-direction: row;
+        margin-top: 0;
+        justify-content: space-between;
+        padding: .5rem;
+    }
+
+    li {
+        font-size: 1.5em;
+        padding-top: 2em;
+    }
+    
+
+    header h3{
+        padding: 0;
+    }
+    
+    main {
+        grid-template-columns: 1fr 1fr;
+        gap: .5em;
+        grid-template-areas: 
+        "hero hero"
+        "one one"
+        "two two"
+        "three three"
+        "four four";
+    }
+
+    main h1 {
+        font-size: 3em;
+    }
+
+    
+    section figure {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    header h3 {
+        padding-left: 1em;
+    }
+}
+
+@media (min-width: 691px) {
+    
+    .navbar {
+        flex-direction: row;
+        margin-top: 0;
+        justify-content: space-around;
+        padding: 1em;
+    }
+
+    li{
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    header h3 {
+        padding-top: 0;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: .5em;
+        grid-template-areas:
+        "hero hero hero hero"
+        "one one two two"
+        "three three  four four";
+    }
+
+    main h1 {
+        font-size: 5em;
+    }
+
+    section figure {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    footer {
+        padding: .5em;
+    }
+
+
+}

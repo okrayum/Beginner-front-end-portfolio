@@ -1,0 +1,209 @@
+*, html, body, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after { box-sizing: inherit;}
+
+body {
+    height: 100vh;
+    background-color: gray;
+    line-height: 1.4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%;
+    height: 20em;
+}
+
+p { padding: .5em;}
+
+/* Nav styling */
+
+.navbar {
+    width: 100%;
+    height: 12vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5em;
+    padding-top: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: center;
+    padding: 1em;
+    font-weight: 700;
+    font-size: 1em;
+    padding-top: .25em;
+}
+    
+a {
+    text-decoration: none;
+    color: silver;
+}
+
+a:hover {
+    color: white;
+}
+
+
+/* Main Styling */
+
+main {
+
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "hero"
+    "one"
+    "two"
+    "three"
+    "four";
+}
+
+.hero {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: hero;
+}
+
+figure {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-1 {
+    background-color: black;
+    grid-area: one;
+}
+
+.sec-2 {
+    background-color: black;
+    grid-area: two;
+}
+
+.sec-3 {
+    background-color: black;
+    grid-area: three;
+}
+
+.sec-4 {
+    background-color: black;
+    grid-area: four;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-top: .5em;
+}
+
+@media (min-width: 400px) and (max-width: 790px) {
+
+    
+    .navbar {
+        flex-direction: row;
+        margin-top: 0;
+        justify-content: space-between;
+    }
+
+    li{
+        font-size: 1.5em;
+        padding-right: .5em;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        gap: .5em;
+        grid-template-areas: 
+        "hero hero"
+        "one one"
+        "two three"
+        "four four";
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    
+    section {
+        padding: .5em
+    }
+
+    header h3 {
+        padding-left: 1em;
+        padding-bottom: .5em;
+
+    }
+
+}
+
+@media (min-width: 791px) {
+
+    .navbar {
+        flex-direction: row;
+        margin-top: 0;
+        justify-content: space-around;
+        padding: 1em;
+    }
+
+    li{
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    section p {
+    padding: 1em;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+      
+    
+    .main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "hero one one two"
+        "hero one one two"
+        "hero three four four"
+        "hero three four four";
+    }
+
+    figcaption {
+        padding-bottom: .5em;
+    }
+    
+    footer {
+        height: 5em;
+        padding: .5em;
+    }
+
+}

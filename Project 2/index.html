@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 id="title">Hilltown Rewards Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve your experience</p>
+    </header>
+
+    <main class="container">
+        <form id="survey-form">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" placeholder="Enter Email" name="email" required>
+
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" placeholder="Ex: 602-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                name="phone" required>
+
+
+            <label for="number" id="number-label">Age (optional)</label>
+            <input type="number" id="number" placeholder="Age" name="age" min="18" max="99">
+
+            <label for="dropdown">Country of visit</label>
+            <select id="dropdown" name="country">
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+            </select>
+
+            <p>Please select your preferred contact method:</p>
+            <div>
+
+                <input type="radio" id="contactChoice1" name="contact" value="email" checked>
+                <label for="contactChoice1">Email</label>
+
+                <input type="radio" id="contactChoice2" name="contact" value="phone">
+                <label for="contactChoice2">Phone</label>
+
+            </div><br>
+
+            <p>Which upgrades did you take advantage of? (Check all that apply)</p>
+
+            <input type="checkbox" id="upgrade1" name="upgrade1" value="wifi">
+            <label for="upgrade1"> Free wi-fi</label><br>
+            <input type="checkbox" id="upgrade2" name="upgrade2" value="bar">
+            <label for="upgrade2"> Free mini bar</label><br>
+            <input type="checkbox" id="upgrade3" name="upgrade3" value="dinner">
+            <label for="upgrade3"> Free dinner</label><br>
+            <input type="checkbox" id="upgrade4" name="upgrade4" value="dinner">
+            <label for="upgrade4"> Free suite upgrade</label><br><br>
+
+            <label for="subject">Comments or suggestions?</label>
+            <textarea id="subject" name="subject" placeholder="Your comments here.." style="height:200px"></textarea>
+
+            <button id="submit" type="submit">Submit</button>
+        </form>
+
+    </main>
+
+
+
+
+    <!-- <script src="pcc-userstory-tests.js"></script> -->
+</body>
+
+</html>

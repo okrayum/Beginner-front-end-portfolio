@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is a technical documentation page">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+
+    <aside>
+        <nav id="navbar">
+            <header>JavaScript Documentation</header>
+            <ul>
+                <li><a href="#What_is_JavaScript?" class="nav-link">What is JavaScript?</a></li>
+                <li><a href="#Troubleshooting_JavaScript" class="nav-link">Troubleshooting JavaScript</a></li>
+                <li><a href="#Variables" class="nav-link">Variables</a></li>
+                <li><a href="#Basic_math_in_JavaScript" class="nav-link">Basic math in JavaScript</a></li>
+                <li><a href="#Handling_text" class="nav-link">Handling text</a></li>
+                <li><a href="#Arrays" class="nav-link">Arrays</a></li>
+                <li><a href="#Conditionals" class="nav-link">Conditionals</a></li>
+                <li><a href="#Looping_code" class="nav-link">Looping code</a></li>
+                <li><a href="#Functions" class="nav-link">Functions</a></li>
+                <li><a href="#Function_return_values" class="nav-link">Function return values</a></li>
+                <li><a href="#Introduction_to_events" class="nav-link">Introduction to events</a></li>
+                <li><a href="#Image_gallery" class="nav-link">Image gallery</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+
+
+
+    <main id="main-doc">
+
+        <section id="What_is_JavaScript?" class="main-section">
+            <header>What is JavaScript?</header>
+            <div>
+                <p>Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a
+                    high
+                    level, answering questions such as "What is it?" and "What can you do with it?", and making sure you
+                    are
+                    comfortable with JavaScript's purpose.</p>
+                <p>JavaScript is a scripting or programming language that allows you to implement complex features on
+                    web pages — every time a web page does more than just sit there and display static information for
+                    you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics,
+                    scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third
+                    layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in
+                    much more detail in other parts of the Learning Area.</p>
+            </div>
+
+            <ul>
+                <li>HTML is the markup language that we use to structure and give meaning to our web content, for
+                    example defining paragraphs, headings, and data tables, or embedding images and videos in the
+                    page.</li>
+                <li>CSS is a language of style rules that we use to apply styling to our HTML content, for example
+                    setting background colors and fonts, and laying out our content in multiple columns.</li>
+                <li>JavaScript is a scripting language that enables you to create dynamically updating content,
+                    control multimedia, animate images, and pretty much everything else. (Okay, not everything, but
+                    it is amazing what you can achieve with a few lines of JavaScript code.)</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>function updateName() {
+                            const name = prompt('Enter a new name');
+                            para.textContent = `Player 1: ${name}`;
+                          }</code>
+            </div>
+
+        </section>
+
+        <section id="Troubleshooting_JavaScript" class="main-section">
+            <header>Troubleshooting JavaScript</header>
+            <p>Generally speaking, when you do something wrong in code, there are two main types of error that
+                you'll come across:</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci beatae totam, aliquam amet
+                tenetur
+                assumenda quisquam excepturi voluptas provident ad ipsum sed suscipit error. Corporis pariatur
+                quos
+                molestias vero eaque cum. Tenetur quasi laudantium dicta minima laboriosam necessitatibus unde
+                provident sit voluptate soluta veritatis minus, nulla ducimus tempore beatae tempora?
+            </p>
+
+
+            <ul>
+                <li>Syntax errors: These are spelling errors in your code that actually cause the program not to run at
+                    all, or stop working part way through — you will usually be provided with some error messages too.
+                    These are usually okay to fix, as long as you are familiar with the right tools and know what the
+                    error messages mean!
+                </li>
+                <li>Logic errors: These are errors where the syntax is actually correct but the code is not what you
+                    intended it to be, meaning that program runs successfully but gives incorrect results. These are
+                    often harder to fix than syntax errors, as there usually isn't an error message to direct you to the
+                    source of the error.
+                </li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>guessSubmit.addeventListener('click', checkGuess);</code>
+            </div>
+
+        </section>
+
+        <section id="Variables" class="main-section">
+            <header>Variables</header>
+            <p>After reading the last couple of articles you should now know what JavaScript is, what it can do for
+                you, how you use it alongside other web technologies, and what its main features look like from a
+                high level. In this article, we will get down to the real basics, looking at how to work with the
+                most basic building blocks of JavaScript — Variables.</p>
+            <p>A variable is a container for a value, like a number we might use in a sum, or a string that we might
+                use as part of a sentence.</p>
+
+            <ul>
+                <li>You shouldn't use other characters because they may cause errors or be hard to understand for an
+                    international audience.</li>
+                <li>Don't use underscores at the start of variable names — this is used in certain JavaScript constructs
+                    to
+                    mean specific things, so may get confusing.</li>
+                <li>Don't use numbers at the start of variables. This isn't allowed and causes an error.</li>
+                <li>A safe convention to stick to is so-called "lower camel case", where you stick together multiple
+                    words,
+                    using lower case for the whole first word and then capitalize subsequent words. We've been using
+                    this
+                    for our variable names in the article so far.</li>
+                <li>Make variable names intuitive, so they describe the data they contain. Don't just use single
+                    letters/numbers, or big long phrases.</li>
+                <li>Variables are case sensitive — so myage is a different variable from myAge.</li>
+                <li>One last point: you also need to avoid using JavaScript reserved words as your variable names — by
+                    this,
+                    we mean the words that make up the actual syntax of JavaScript! So, you can't use words like var,
+                    function, let, and for as variable names. Browsers recognize them as different code items, and so
+                    you'll
+                    get errors.</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>var myName;
+                        var myAge;</code>
+            </div>
+        </section>
+
+        <section id="Basic_math_in_JavaScript" class="main-section">
+
+            <header>Basic math in JavaScript</header>
+
+            <p>At this point in the course we discuss math in JavaScript — how we can use operators and other features
+                to successfully manipulate numbers to do our bidding.</p>
+            <p>Okay, maybe not. Some of us like math, some of us have hated math ever since we had to learn
+                multiplication tables and long division in school, and some of us sit somewhere in between the two. But
+                none of us can deny that math is a fundamental part of life that we can't get very far without. This is
+                especially true when we are learning to program JavaScript (or any other language for that matter) — so
+                much of what we do relies on processing numerical data, calculating new values, and so on, that you
+                won't be surprised to learn that JavaScript has a full-featured set of math functions available.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci beatae totam, aliquam amet
+                tenetur
+                assumenda quisquam excepturi voluptas provident ad ipsum sed suscipit error. Corporis pariatur
+                quos
+                molestias vero eaque cum. Tenetur quasi laudantium dicta minima laboriosam necessitatibus unde
+                provident sit voluptate soluta veritatis minus, nulla ducimus tempore beatae tempora?</p>
+
+
+            <ul>
+                <li>Integers are floating-point numbers without a fraction. They can either be positive or negative,
+                    e.g.
+                    10, 400, or -5.</li>
+                <li>Floating point numbers (floats) have decimal points and decimal places, for example 12.5, and
+                    56.7786543.</li>
+                <li>Doubles are a specific type of floating point number that have greater precision than standard
+                    floating
+                    point numbers (meaning that they are accurate to a greater number of decimal places).</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>
+                    const myInt = 5;
+                    const myFloat = 6.667;
+                    myInt;
+                    myFloat;
+                </code>
+            </div>
+        </section>
+
+        <section id="Handling_text" class="main-section">
+            <header>Handling text</header>
+            <p>Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In
+                this article, we'll look at all the common things that you really ought to know about strings when
+                learning JavaScript, such as creating strings, escaping quotes in strings, and joining strings together.
+            </p>
+            <p>Words are very important to humans — they are a large part of how we communicate. Since the Web is a
+                largely text-based medium designed to allow humans to communicate and share information, it is useful
+                for us to have control over the words that appear on it. HTML provides structure and meaning to our
+                text, CSS allows us to precisely style it, and JavaScript contains a number of features for manipulating
+                strings, creating custom welcome messages and prompts, showing the right text labels when needed,
+                sorting terms into the desired order, and much more.</p>
+
+            <ul>
+                <li>Integers are floating-point numbers without a fraction. They can either be positive or negative,
+                    e.g.
+                    10, 400, or -5.</li>
+                <li>Floating point numbers (floats) have decimal points and decimal places, for example 12.5, and
+                    56.7786543.</li>
+                <li>Doubles are a specific type of floating point number that have greater precision than standard
+                    floating
+                    point numbers (meaning that they are accurate to a greater number of decimal places).</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>const badString1 = This is a test;
+                const badString2 = 'This is a test;
+                const badString3 = This is a test';</code>
+            </div>
+
+        </section>
+
+        <section id="Arrays" class="main-section">
+            <header>Arrays</header>
+            <p>Arrays are generally described as "list-like objects"; they are basically single objects that contain
+                multiple values stored in a list. Array objects can be stored in variables and dealt with in much the
+                same way as any other type of value, the difference being that we can access each value inside the list
+                individually, and do super useful and efficient things with the list, like loop through it and do the
+                same thing to every value. Maybe we've got a series of product items and their prices stored in an
+                array, and we want to loop through them all and print them out on an invoice, while totaling all the
+                prices together and printing out the total price at the bottom.
+            </p>
+            <p>If we didn't have arrays, we'd have to store every item in a separate variable, then call the code that
+                does the printing and adding separately for each item. This would be much longer to write out, less
+                efficient, and more error-prone. If we had 10 items to add to the invoice it would already be annoying,
+                but what about 100 items, or 1000? We'll return to this example later on in the article.</p>
+
+            <ul>
+                <li>Integers are floating-point numbers without a fraction. They can either be positive or negative,
+                    e.g.
+                    10, 400, or -5.</li>
+                <li>Floating point numbers (floats) have decimal points and decimal places, for example 12.5, and
+                    56.7786543.</li>
+                <li>Doubles are a specific type of floating point number that have greater precision than standard
+                    floating
+                    point numbers (meaning that they are accurate to a greater number of decimal places).</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+                    console.log(shopping);</code>
+            </div>
+
+        </section>
+        <section id="Conditionals" class="main-section">
+            <header>Conditionals</header>
+            <p>In any programming language, the code needs to make decisions and carry out actions accordingly depending
+                on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over.
+                In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon
+                if it is nighttime. In this article, we'll explore how so-called conditional statements work in
+                JavaScript.
+            </p>
+            <p>Conditional statements allow us to represent such decision making in JavaScript, from the choice that
+                must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the
+                outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be
+                "felt full, but mom scolded me for eating all the cookies".)</p>
+
+
+            <ul>
+                <li>The keyword if followed by some parentheses.</li>
+                <li>A condition to test, placed inside the parentheses (typically "is this value bigger than this other
+                    value?", or "does this value exist?"). The condition makes use of the comparison operators we
+                    discussed in the last module and returns true or false.</li>
+                <li>A set of curly braces, inside which we have some code — this can be any code we like, and it only
+                    runs if the condition returns true.</li>
+                <li>The keyword else.</li>
+                <li>Another set of curly braces, inside which we have some more code — this can be any code we like, and
+                    it only runs if the condition is not true — or in other words, the condition is false.</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>if (condition) {
+                /* code to run if condition is true */
+            } else {
+                /* run some other code instead */
+            }</code>
+            </div>
+
+        </section>
+
+        <section id="Looping_code" class="main-section">
+            <header>Looping code</header>
+            <p>Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic
+                calculations to just about any other situation where you've got a lot of similar items of work to
+                complete. Here we'll look at the loop structures available in JavaScript that handle such needs.
+            </p>
+            <p>Loops are all about doing the same thing over and over again. Often, the code will be slightly different
+                each time round the loop, or the same code will run but with different variables.</p>
+
+            <ul>
+                <li>random(x), defined earlier in the code, returns a whole number between 0 and x-1.</li>
+                <li>Inside the parentheses we have three items, separated by semi-colons:</li>
+                <li>Some curly braces that contain a block of code — this code will be run each time the loop iterates.
+                </li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>function toUpper(string) {
+                return string.toUpperCase();
+              }</code>
+            </div>
+
+        </section>
+
+        <section id="Functions" class="main-section">
+            <header>Functions</header>
+            <p>Another essential concept in coding is functions, which allow you to store a piece of code that does a
+                single task inside a defined block, and then call that code whenever you need it using a single short
+                command — rather than having to type out the same code multiple times. In this article we'll explore
+                fundamental concepts behind functions such as basic syntax, how to invoke and define them, scope, and
+                parameters.
+            </p>
+            <p>In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through
+                the course so far; we've just not been talking about them very much. Now is the time, however, for us to
+                start talking about functions explicitly, and really exploring their syntax.</p>
+
+            <ul>
+                <li>The name of the event to listen for, which in this case is keydown</li>
+                <li>A function to run when the event happens.</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>const myText = 'I am a string';
+                const newString = myText.replace('string', 'sausage');
+                console.log(newString);
+                </code>
+            </div>
+
+        </section>
+        <section id="Function_return_values" class="main-section">
+            <header>Function return values</header>
+            <p>There's one last essential concept about functions for us to discuss — return values. Some functions
+                don't return a significant value, but others do. It's important to understand what their values are, how
+                to use them in your code, and how to make functions return useful values. We'll cover all of these
+                below.
+            </p>
+            <p>Return values are just what they sound like — the values that a function returns when it has completed.
+                You've already met return values a number of times, although you may not have thought about them
+                explicitly.</p>
+
+            <ul>
+                <li>The substring to find ('cold').</li>
+                <li>The string to replace it with ('warm').</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>const myText = 'The weather is cold';
+                const newString = myText.replace('cold', 'warm');
+                console.log(newString);
+                </code>
+            </div>
+
+        </section>
+        <section id="Introduction_to_events" class="main-section">
+            <header>Introduction to events</header>
+            <p>Events are actions or occurrences that happen in the system you are programming, which the system tells
+                you about so your code can react to them.
+            </p>
+            <p>As mentioned above, events are actions or occurrences that happen in the system you are programming — the
+                system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by
+                which an action can be automatically taken (that is, some code running) when the event occurs. For
+                example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As
+                a result, the plane can safely take off.</p>
+            <p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific
+                item that resides in it. This might be a single element, a set of elements, the HTML document loaded in
+                the current tab, or the entire browser window. There are many different types of events that can occur.
+            </p>
+
+            <ul>
+                <li>The user selects, clicks, or hovers the cursor over a certain element.</li>
+                <li>The user chooses a key on the keyboard.</li>
+                <li>The user resizes or closes the browser window.</li>
+                <li>A web page finishes loading.</li>
+                <li>A form is submitted.</li>
+                <li>A video is played, paused, or finishes.</li>
+                <li>An error occurs.</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>const btn = document.querySelector('button');
+                function random(number) {
+                  return Math.floor(Math.random() * (number+1));
+                </code>
+            </div>
+
+        </section>
+
+        <section id="Image_gallery" class="main-section">
+            <header>Image gallery</header>
+            <p>Now that we've looked at the fundamental building blocks of JavaScript, we'll test your knowledge of
+                loops, functions, conditionals and events by getting you to build a fairly common item you'll see on a
+                lot of websites — a JavaScript-powered image gallery.
+            </p>
+            <p>You have been provided with some HTML, CSS and image assets and a few lines of JavaScript code; you need
+                to write the necessary JavaScript to turn this into a working program. </p>
+
+            <ul>
+                <li>It absolutely positions the three elements inside the full-img <div> — the <img> in which the
+                        full-sized image is displayed, an empty <div> that is sized to be the same size as the <img> and
+                            put right over the top of it (this is used to apply a darkening effect to the image via a
+                            semi-transparent background color), and a <button> that is used to control the darkening
+                                effect.</li>
+                <li>It sets the width of any images inside the thumb-bar <div> (so-called "thumbnail" images) to 20%,
+                        and floats them to the left so they sit next to one another on a line.</li>
+            </ul>
+
+            <div class="code-example">
+                <h3>Example</h3>
+                <code>btn.setAttribute('class', xxx);
+                btn.textContent = xxx;
+                overlay.style.backgroundColor = xxx;</code>
+            </div>
+
+        </section>
+
+        <footer>
+            <h3>Reference</h3>
+            <p>For more info visit<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"> MDN</a></p>
+        </footer>
+
+    </main>
+
+    <!-- <script src="pcc-userstory-tests.js"></script> -->
+</body>
+
+</html>

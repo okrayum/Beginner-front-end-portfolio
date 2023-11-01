@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+
+      width: 100vw; 
+      min-height: 100vh;
+      margin: 0;
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: black;
+      color: white;
+    }
+   
+    a {
+        text-decoration: none;
+        
+    }
+
+    a:visited {
+        color: yellow;
+    }
+
+    a:hover {
+        color: green;
+    }
+
+    aside ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    
+    aside ul li {
+        list-style: none;
+        border-bottom: 2px solid white;
+    }
+
+    ul li a {
+        font-size: 1.2em;
+    }
+
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        margin-right: .1em;
+        width: 100vw;
+    }
+
+    
+    main li {
+        margin-left: -1em;
+    }
+
+    p {
+        margin-left: .5em;
+    }    
+    header {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .main-section {
+        margin-top: 0;
+        text-align: justify;
+        margin-right: 0;
+    }
+
+    .code-example {
+        display: none;
+        margin-left: 5em;
+    }
+
+
+
+  @media screen and (min-width: 1025px) {
+
+        body {
+        display: flex;    
+        background-color: bisque;
+        color: black;
+        margin-right: 0;
+        width: 100%;
+        
+
+        }
+
+        aside {
+
+        display: flex;
+        flex-direction: column;  
+        width: 25vw;
+        height: 100vh;
+        position: fixed;
+        border-style: solid;
+                                                     
+        }
+
+     
+        aside header {
+        margin-left: 1.5em;
+                       
+        }
+
+
+       nav {
+        justify-content: space-around;
+        }
+
+        aside ul {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0;
+        
+        }
+
+        aside ul li {
+        list-style: none;
+        border-bottom: 2px solid black;
+        padding-left: 2em;
+        }
+
+        ul li a {
+        font-size: 1.5em;
+        }
+
+        main {
+        flex-direction: column;
+        margin-left: 24vw;
+        width: 100vw;
+        margin-right: 0;
+        padding-right: 0;
+                                     
+        }
+
+        main p {
+        margin-left: 3em;
+        
+        }
+
+        main li {
+         margin-left: 5em;
+        
+        }
+
+         main code {
+         margin-left: 6em;
+         color: blue;
+        }
+
+        section {
+        margin: 2em;
+        }
+
+        header {
+        font-size: 1.5em;
+        }
+
+        .code-example {
+            display: inherit;
+        }
+
+        footer {
+            margin-left: 5em;
+        }
+
+        .main-section {
+            padding: 20px;
+        }
+
+        a:visited {
+            color: dodgerblue;
+        }
+
+
+
+
+      
+    }
